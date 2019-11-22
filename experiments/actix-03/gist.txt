@@ -1,0 +1,2699 @@
+warning: Patch `actix-files v0.2.0-alpha.1 (/Users/cdbattags/projects/cdbattaglia/rust-http-benchmarks/actix-web/actix-files)` was not used in the crate graph.
+Patch `actix-http-test v0.3.0-alpha.1 (/Users/cdbattags/projects/cdbattaglia/rust-http-benchmarks/actix-web/test-server)` was not used in the crate graph.
+Patch `actix-multipart v0.2.0-alpha.1 (/Users/cdbattags/projects/cdbattaglia/rust-http-benchmarks/actix-web/actix-multipart)` was not used in the crate graph.
+Patch `actix-session v0.3.0-alpha.1 (/Users/cdbattags/projects/cdbattaglia/rust-http-benchmarks/actix-web/actix-session)` was not used in the crate graph.
+Check that the patched package version and available features are compatible
+with the dependency requirements. If the patch has a different version from
+what is locked in the Cargo.lock file, run `cargo update` to use the new
+version. This may also occur with an optional dependency that is not enabled.
+   Compiling futures-core-preview v0.3.0-alpha.19
+   Compiling futures-sink-preview v0.3.0-alpha.19
+   Compiling futures-io-preview v0.3.0-alpha.19
+   Compiling futures-core v0.3.1
+   Compiling futures-sink v0.3.1
+   Compiling futures v0.1.29
+   Compiling smallvec v1.0.0
+   Compiling futures-io v0.3.1
+error[E0432]: unresolved import `core::task::Context`
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:21:18
+   |
+21 | use core::task::{Context, Poll};
+   |                  ^^^^^^^ no `Context` in `task`
+
+error[E0432]: unresolved import `core::convert::Infallible`
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:164:9
+    |
+164 |     use core::convert::Infallible as Never;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Infallible` in `convert`
+
+error[E0432]: unresolved import `core::task::Context`
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:21:18
+   |
+21 | use core::task::{Context, Poll};
+   |                  ^^^^^^^ no `Context` in `task`
+
+error[E0432]: unresolved import `core::convert::Infallible`
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:164:9
+    |
+164 |     use core::convert::Infallible as Never;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no `Infallible` in `convert`
+
+error[E0658]: use of unstable library feature 'alloc': this library is unlikely to be stabilized in its current form or name (see issue #27783)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:17:1
+   |
+17 | extern crate alloc;
+   | ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:21:27
+   |
+21 | use core::task::{Context, Poll};
+   |                           ^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:66:66
+   |
+66 |     fn poll_ready(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>>;
+   |                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:101:66
+    |
+101 |     fn poll_flush(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>>;
+    |                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:114:66
+    |
+114 |     fn poll_close(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>>;
+    |                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:120:70
+    |
+120 |     fn poll_ready(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:128:70
+    |
+128 |     fn poll_flush(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:132:70
+    |
+132 |     fn poll_close(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+error[E0432]: unresolved import `std::task::Context`
+
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:33:21
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   |
+33 |     use std::task::{Context, Poll};
+   |                     ^^^^^^^ no `Context` in `task`
+
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:144:66
+    |
+error[E0432]: unresolved imports `io::IoSlice`, `io::IoSliceMut`
+144 |     fn poll_ready(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:42:9
+    |                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+   |
+42 |         IoSlice as IoSlice,
+   |         ^^^^^^^^^^^^^^^^^^ no `IoSlice` in `io`
+43 |         IoSliceMut as IoSliceMut,
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^ no `IoSliceMut` in `io`
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:152:66
+
+    |
+152 |     fn poll_flush(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:156:66
+    |
+156 |     fn poll_close(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:169:69
+    |
+169 |         fn poll_ready(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:170:13
+    |
+170 |             Poll::Ready(Ok(()))
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:179:69
+    |
+179 |         fn poll_flush(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:180:13
+    |
+180 |             Poll::Ready(Ok(()))
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:183:69
+    |
+183 |         fn poll_close(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:184:13
+    |
+184 |             Poll::Ready(Ok(()))
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:191:69
+    |
+191 |         fn poll_ready(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:192:13
+    |
+192 |             Poll::Ready(Ok(()))
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:201:69
+    |
+201 |         fn poll_flush(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:202:13
+    |
+202 |             Poll::Ready(Ok(()))
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:205:69
+    |
+205 |         fn poll_close(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:206:13
+    |
+206 |             Poll::Ready(Ok(()))
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:213:74
+    |
+213 |         fn poll_ready(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'alloc': this library is unlikely to be stabilized in its current form or name (see issue #27783)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:17:1
+   |
+17 | extern crate alloc;
+   | ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:21:27
+   |
+21 | use core::task::{Context, Poll};
+   |                           ^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:66:66
+   |
+66 |     fn poll_ready(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>>;
+   |                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:101:66
+    |
+101 |     fn poll_flush(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>>;
+    |                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:114:66
+    |
+114 |     fn poll_close(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>>;
+    |                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:120:70
+    |
+120 |     fn poll_ready(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:128:70
+    |
+128 |     fn poll_flush(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:132:70
+    |
+132 |     fn poll_close(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:144:66
+    |
+144 |     fn poll_ready(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:152:66
+    |
+152 |     fn poll_flush(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:156:66
+    |
+156 |     fn poll_close(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:169:69
+    |
+169 |         fn poll_ready(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:170:13
+    |
+170 |             Poll::Ready(Ok(()))
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:179:69
+    |
+179 |         fn poll_flush(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:180:13
+    |
+180 |             Poll::Ready(Ok(()))
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:183:69
+    |
+183 |         fn poll_close(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:184:13
+    |
+184 |             Poll::Ready(Ok(()))
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:191:69
+    |
+191 |         fn poll_ready(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:192:13
+    |
+192 |             Poll::Ready(Ok(()))
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:201:69
+    |
+201 |         fn poll_flush(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:202:13
+    |
+202 |             Poll::Ready(Ok(()))
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:205:69
+    |
+205 |         fn poll_close(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:206:13
+    |
+206 |             Poll::Ready(Ok(()))
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:213:74
+    |
+213 |         fn poll_ready(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:221:74
+    |
+221 |         fn poll_flush(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-0.3.1/src/lib.rs:225:74
+    |
+225 |         fn poll_close(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:221:74
+    |
+221 |         fn poll_flush(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-sink-preview-0.3.0-alpha.19/src/lib.rs:225:74
+    |
+225 |         fn poll_close(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<(), Self::Error>> {
+    |                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0432]: unresolved import `core::task::Context`
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:5:18
+  |
+5 | use core::task::{Context, Poll};
+  |                  ^^^^^^^ no `Context` in `task`
+
+error[E0432]: unresolved import `core::task::Context`
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:7:12
+  |
+7 |     task::{Context, Poll},
+  |            ^^^^^^^ no `Context` in `task`
+
+error[E0432]: unresolved import `core::task::Context`
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/stream.rs:5:18
+  |
+5 | use core::task::{Context, Poll};
+  |                  ^^^^^^^ no `Context` in `task`
+
+error[E0432]: unresolved imports `core::task::Context`, `core::task::RawWaker`, `core::task::RawWakerVTable`
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/task/mod.rs:12:22
+   |
+12 | pub use core::task::{Context, Poll, Waker, RawWaker, RawWakerVTable};
+   |                      ^^^^^^^               ^^^^^^^^  ^^^^^^^^^^^^^^ no `RawWakerVTable` in `task`
+   |                      |                     |
+   |                      |                     no `RawWaker` in `task`
+   |                      no `Context` in `task`
+
+error[E0432]: unresolved import `core::task::Context`
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:5:18
+  |
+5 | use core::task::{Context, Poll};
+  |                  ^^^^^^^ no `Context` in `task`
+
+error[E0432]: unresolved import `core::task::Context`
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/stream.rs:5:18
+  |
+5 | use core::task::{Context, Poll};
+  |                  ^^^^^^^ no `Context` in `task`
+
+error[E0432]: unresolved imports `core::task::Context`, `core::task::RawWaker`, `core::task::RawWakerVTable`
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/mod.rs:9:22
+  |
+9 | pub use core::task::{Context, Poll, Waker, RawWaker, RawWakerVTable};
+  |                      ^^^^^^^               ^^^^^^^^  ^^^^^^^^^^^^^^ no `RawWakerVTable` in `task`
+  |                      |                     |
+  |                      |                     no `RawWaker` in `task`
+  |                      no `Context` in `task`
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:33:30
+   |
+33 |     use std::task::{Context, Poll};
+   |                              ^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:92:16
+   |
+92 |             -> Poll<Result<usize>>;
+   |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:117:16
+    |
+117 |             -> Poll<Result<usize>>
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:123:17
+    |
+123 |                 Poll::Ready(Ok(0))
+    |                 ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:152:16
+    |
+152 |             -> Poll<Result<usize>>;
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:178:16
+    |
+178 |             -> Poll<Result<usize>>
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:184:17
+    |
+184 |                 Poll::Ready(Ok(0))
+    |                 ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:204:70
+    |
+204 |         fn poll_flush(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>>;
+    |                                                                      ^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:221:70
+    |
+221 |         fn poll_close(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>>;
+    |                                                                      ^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:252:16
+    |
+252 |             -> Poll<Result<u64>>;
+    |                ^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:292:16
+    |
+292 |             -> Poll<Result<&[u8]>>;
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:352:16
+    |
+352 |             -> Poll<Result<usize>>
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:358:16
+    |
+358 |             -> Poll<Result<usize>>
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:431:16
+    |
+431 |             -> Poll<Result<usize>>
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:437:16
+    |
+437 |             -> Poll<Result<usize>>
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:442:70
+    |
+442 |         fn poll_flush(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                      ^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:446:70
+    |
+446 |         fn poll_close(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                      ^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:480:14
+    |
+480 |         ) -> Poll<Result<usize>> {
+    |              ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:490:13
+    |
+490 |             Poll::Ready(result)
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:494:16
+    |
+494 |             -> Poll<Result<usize>>
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:496:13
+    |
+496 |             Poll::Ready(io::Write::write_vectored(&mut self.get_mut().get_mut().as_mut(), bufs))
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:499:69
+    |
+499 |         fn poll_flush(self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                     ^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:500:13
+    |
+500 |             Poll::Ready(io::Write::flush(&mut self.get_mut().get_mut().as_mut()))
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:503:70
+    |
+503 |         fn poll_close(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                      ^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:536:16
+    |
+536 |             -> Poll<Result<u64>>
+    |                ^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:584:16
+    |
+584 |             -> Poll<Result<&[u8]>>
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:320:20
+    |
+320 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+334 |         deref_async_read!();
+    |         -------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:326:20
+    |
+326 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+334 |         deref_async_read!();
+    |         -------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:320:20
+    |
+320 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+338 |         deref_async_read!();
+    |         -------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:326:20
+    |
+326 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+338 |         deref_async_read!();
+    |         -------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:372:20
+    |
+372 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+386 |         delegate_async_read_to_stdio!();
+    |         -------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:374:17
+    |
+374 |                 Poll::Ready(io::Read::read(&mut *self, buf))
+    |                 ^^^^^^^^^^^
+...
+386 |         delegate_async_read_to_stdio!();
+    |         -------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:378:20
+    |
+378 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+386 |         delegate_async_read_to_stdio!();
+    |         -------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:380:17
+    |
+380 |                 Poll::Ready(io::Read::read_vectored(&mut *self, bufs))
+    |                 ^^^^^^^^^^^
+...
+386 |         delegate_async_read_to_stdio!();
+    |         -------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:372:20
+    |
+372 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+390 |         delegate_async_read_to_stdio!();
+    |         -------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:374:17
+    |
+374 |                 Poll::Ready(io::Read::read(&mut *self, buf))
+    |                 ^^^^^^^^^^^
+...
+390 |         delegate_async_read_to_stdio!();
+    |         -------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:378:20
+    |
+378 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+390 |         delegate_async_read_to_stdio!();
+    |         -------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:380:17
+    |
+380 |                 Poll::Ready(io::Read::read_vectored(&mut *self, bufs))
+    |                 ^^^^^^^^^^^
+...
+390 |         delegate_async_read_to_stdio!();
+    |         -------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:396:20
+    |
+396 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+418 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+
+error[E0432]: unresolved import `std::task::Context`
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:32:21
+   |
+32 |     use std::task::{Context, Poll};
+   |                     ^^^^^^^ no `Context` in `task`
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:402:20
+    |
+402 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+418 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:407:78
+    |
+407 |             fn poll_flush(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                              ^^^^^^^^^^^^^^^^
+...
+418 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+
+error[E0432]: unresolved imports `io::IoSlice`, `io::IoSliceMut`
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:41:9
+   |
+41 |         IoSlice as IoSlice,
+   |         ^^^^^^^^^^^^^^^^^^ no `IoSlice` in `io`
+42 |         IoSliceMut as IoSliceMut,
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^ no `IoSliceMut` in `io`
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:411:78
+    |
+411 |             fn poll_close(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                              ^^^^^^^^^^^^^^^^
+...
+418 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:396:20
+    |
+396 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+422 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:402:20
+    |
+402 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+422 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:407:78
+    |
+407 |             fn poll_flush(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                              ^^^^^^^^^^^^^^^^
+...
+422 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:411:78
+    |
+411 |             fn poll_close(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                              ^^^^^^^^^^^^^^^^
+...
+422 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:454:20
+    |
+454 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+509 |         delegate_async_write_to_stdio!();
+    |         --------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:456:17
+    |
+456 |                 Poll::Ready(io::Write::write(&mut *self, buf))
+    |                 ^^^^^^^^^^^
+...
+509 |         delegate_async_write_to_stdio!();
+    |         --------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:460:20
+    |
+460 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+509 |         delegate_async_write_to_stdio!();
+    |         --------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:462:17
+    |
+462 |                 Poll::Ready(io::Write::write_vectored(&mut *self, bufs))
+    |                 ^^^^^^^^^^^
+...
+509 |         delegate_async_write_to_stdio!();
+    |         --------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:465:77
+    |
+465 |             fn poll_flush(mut self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                             ^^^^^^^^^^^^^^^^
+...
+509 |         delegate_async_write_to_stdio!();
+    |         --------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:466:17
+    |
+466 |                 Poll::Ready(io::Write::flush(&mut *self))
+    |                 ^^^^^^^^^^^
+...
+509 |         delegate_async_write_to_stdio!();
+    |         --------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:469:74
+    |
+469 |             fn poll_close(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                          ^^^^^^^^^^^^^^^^
+...
+509 |         delegate_async_write_to_stdio!();
+    |         --------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:515:20
+    |
+515 |                 -> Poll<Result<u64>>
+    |                    ^^^^^^^^^^^^^^^^^
+...
+523 |         deref_async_seek!();
+    |         -------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:515:20
+    |
+515 |                 -> Poll<Result<u64>>
+    |                    ^^^^^^^^^^^^^^^^^
+...
+527 |         deref_async_seek!();
+    |         -------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:545:16
+    |
+545 |             -> Poll<Result<u64>>
+    |                ^^^^^^^^^^^^^^^^^
+...
+553 |         delegate_async_seek_to_stdio!();
+    |         -------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:547:17
+    |
+547 |                 Poll::Ready(io::Seek::seek(&mut *self, pos))
+    |                 ^^^^^^^^^^^
+...
+553 |         delegate_async_seek_to_stdio!();
+    |         -------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:559:20
+    |
+559 |                 -> Poll<Result<&[u8]>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+571 |         deref_async_buf_read!();
+    |         ------------------------ in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:559:20
+    |
+559 |                 -> Poll<Result<&[u8]>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+575 |         deref_async_buf_read!();
+    |         ------------------------ in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:597:20
+    |
+597 |                 -> Poll<Result<&[u8]>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+609 |         delegate_async_buf_read_to_stdio!();
+    |         ------------------------------------ in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:599:17
+    |
+599 |                 Poll::Ready(io::BufRead::fill_buf(self.get_mut()))
+    |                 ^^^^^^^^^^^
+...
+609 |         delegate_async_buf_read_to_stdio!();
+    |         ------------------------------------ in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:597:20
+    |
+597 |                 -> Poll<Result<&[u8]>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+613 |         delegate_async_buf_read_to_stdio!();
+    |         ------------------------------------ in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:599:17
+    |
+599 |                 Poll::Ready(io::BufRead::fill_buf(self.get_mut()))
+    |                 ^^^^^^^^^^^
+...
+613 |         delegate_async_buf_read_to_stdio!();
+    |         ------------------------------------ in this macro invocation
+
+error[E0106]: missing lifetime specifier
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:292:28
+    |
+292 |             -> Poll<Result<&[u8]>>;
+    |                            ^ expected lifetime parameter
+    |
+    = help: this function's return type contains a borrowed value, but the signature does not say which one of argument 2's 2 lifetimes it is borrowed from
+
+error[E0106]: missing lifetime specifier
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:559:32
+    |
+559 |                 -> Poll<Result<&[u8]>>
+    |                                ^ expected lifetime parameter
+...
+571 |         deref_async_buf_read!();
+    |         ------------------------ in this macro invocation
+    |
+    = help: this function's return type contains a borrowed value, but the signature does not say which one of `cx`'s 2 lifetimes it is borrowed from
+
+error[E0106]: missing lifetime specifier
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:559:32
+    |
+559 |                 -> Poll<Result<&[u8]>>
+    |                                ^ expected lifetime parameter
+...
+575 |         deref_async_buf_read!();
+    |         ------------------------ in this macro invocation
+    |
+    = help: this function's return type contains a borrowed value, but the signature does not say which one of `cx`'s 2 lifetimes it is borrowed from
+
+error[E0106]: missing lifetime specifier
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:584:28
+    |
+584 |             -> Poll<Result<&[u8]>>
+    |                            ^ expected lifetime parameter
+    |
+    = help: this function's return type contains a borrowed value, but the signature does not say which one of `cx`'s 2 lifetimes it is borrowed from
+
+error[E0106]: missing lifetime specifier
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:597:32
+    |
+597 |                 -> Poll<Result<&[u8]>>
+    |                                ^ expected lifetime parameter
+...
+609 |         delegate_async_buf_read_to_stdio!();
+    |         ------------------------------------ in this macro invocation
+    |
+    = help: this function's return type contains a borrowed value, but the signature does not say which one of `_`'s 2 lifetimes it is borrowed from
+
+error[E0106]: missing lifetime specifier
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-preview-0.3.0-alpha.19/src/lib.rs:597:32
+    |
+597 |                 -> Poll<Result<&[u8]>>
+    |                                ^ expected lifetime parameter
+...
+613 |         delegate_async_buf_read_to_stdio!();
+    |         ------------------------------------ in this macro invocation
+    |
+    = help: this function's return type contains a borrowed value, but the signature does not say which one of `_`'s 2 lifetimes it is borrowed from
+
+error: aborting due to 71 previous errors
+
+Some errors occurred: E0106, E0432, E0658.
+For more information about an error, try `rustc --explain E0106`.
+error[E0658]: use of unstable library feature 'alloc': this library is unlikely to be stabilized in its current form or name (see issue #27783)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/lib.rs:20:1
+   |
+20 | extern crate alloc;
+   | ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/lib.rs:23:39
+   |
+23 | #[doc(hidden)] pub use self::future::{Future, FusedFuture, TryFuture};
+   |                                       ^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/lib.rs:30:24
+   |
+30 | #[doc(hidden)] pub use self::task::Poll;
+   |                        ^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:5:27
+  |
+5 | use core::task::{Context, Poll};
+  |                           ^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:7:9
+  |
+7 | pub use core::future::Future;
+  |         ^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'alloc': this library is unlikely to be stabilized in its current form or name (see issue #27783)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/lib.rs:20:1
+   |
+20 | extern crate alloc;
+   | ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:15:55
+   |
+15 | pub type BoxFuture<'a, T> = Pin<alloc::boxed::Box<dyn Future<Output = T> + Send + 'a>>;
+   |                                                       ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/lib.rs:23:39
+   |
+23 | #[doc(hidden)] pub use self::future::{Future, FusedFuture, TryFuture};
+   |                                       ^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:19:60
+   |
+19 | pub type LocalBoxFuture<'a, T> = Pin<alloc::boxed::Box<dyn Future<Output = T> + 'a>>;
+   |                                                            ^^^^^^^^^^^^^^^^^^
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:5:27
+  |
+5 | use core::task::{Context, Poll};
+  |                           ^^^^
+
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:7:9
+  |
+7 | pub use core::future::Future;
+  |         ^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:12:55
+   |
+12 | pub type BoxFuture<'a, T> = Pin<alloc::boxed::Box<dyn Future<Output = T> + Send + 'a>>;
+   |                                                       ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:29:24
+   |
+29 | pub trait FusedFuture: Future {
+   |                        ^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:16:60
+   |
+16 | pub type LocalBoxFuture<'a, T> = Pin<alloc::boxed::Box<dyn Future<Output = T> + 'a>>;
+   |                                                            ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:26:24
+   |
+26 | pub trait FusedFuture: Future {
+   |                        ^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:60:22
+   |
+60 | pub trait TryFuture: Future + private_try_future::Sealed {
+   |                      ^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:57:22
+   |
+57 | pub trait TryFuture: Future + private_try_future::Sealed {
+   |                      ^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:79:23
+   |
+79 |     where F: ?Sized + Future<Output = Result<T, E>>
+   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:76:23
+   |
+76 |     where F: ?Sized + Future<Output = Result<T, E>>
+   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:72:10
+   |
+72 |     ) -> Poll<Result<Self::Ok, Self::Error>>;
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:75:10
+   |
+75 |     ) -> Poll<Result<Self::Ok, Self::Error>>;
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:32:30
+   |
+32 |     use std::task::{Context, Poll};
+   |                              ^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:82:64
+   |
+82 |     fn try_poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<F::Output> {
+   |                                                                ^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:48:9
+   |
+48 |     use super::Future;
+   |         ^^^^^^^^^^^^^
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:85:64
+   |
+85 |     fn try_poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<F::Output> {
+   |                                                                ^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:91:16
+   |
+91 |             -> Poll<Result<usize>>;
+   |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:4:5
+  |
+4 |     future::Future,
+  |     ^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:116:16
+    |
+116 |             -> Poll<Result<usize>>
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:7:21
+  |
+7 |     task::{Context, Poll},
+  |                     ^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:122:17
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:17:23
+    |
+122 |                 Poll::Ready(Ok(0))
+   |
+    |                 ^^^^^^^^^^^
+17 |     future: *mut (dyn Future<Output = T> + 'static),
+
+   |                       ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:18:34
+   |
+18 |     drop_fn: unsafe fn(*mut (dyn Future<Output = T> + 'static)),
+   |                                  ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:151:16
+    |
+151 |             -> Poll<Result<usize>>;
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:26:56
+   |
+26 | unsafe fn remove_future_lifetime<'a, T>(ptr: *mut (dyn Future<Output = T> + 'a))
+   |                                                        ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:177:16
+    |
+177 |             -> Poll<Result<usize>>
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:27:18
+   |
+27 |     -> *mut (dyn Future<Output = T> + 'static)
+   |                  ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:183:17
+    |
+183 |                 Poll::Ready(Ok(0))
+    |                 ^^^^^^^^^^^
+
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:203:70
+    |
+203 |         fn poll_flush(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>>;
+    |                                                                      ^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:33:65
+   |
+33 | unsafe fn remove_drop_lifetime<'a, T>(ptr: unsafe fn (*mut (dyn Future<Output = T> + 'a)))
+   |                                                                 ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:220:70
+    |
+220 |         fn poll_close(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>>;
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+    |                                                                      ^^^^^^^^^^^^^^^^
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:34:28
+
+   |
+34 |     -> unsafe fn(*mut (dyn Future<Output = T> + 'static))
+   |                            ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:52:50
+   |
+52 |     impl<F, T, E> Sealed for F where F: ?Sized + Future<Output = Result<T, E>> {}
+   |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:75:5
+   |
+75 |     type Output = T;
+   |     ^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:78:5
+   |
+78 | /     fn poll(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<T> {
+79 | |         unsafe {
+80 | |             Pin::new_unchecked(&mut *self.future).poll(cx)
+81 | |         }
+82 | |     }
+   | |_____^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:74:9
+   |
+74 | impl<T> Future for LocalFutureObj<'_, T> {
+   |         ^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:124:5
+    |
+124 |     type Output = T;
+    |     ^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:127:5
+    |
+127 | /     fn poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<T> {
+128 | |         let pinned_field: Pin<&mut LocalFutureObj<'_, T>> = unsafe {
+129 | |             self.map_unchecked_mut(|x| &mut x.0)
+130 | |         };
+131 | |         LocalFutureObj::poll(pinned_field, cx)
+132 | |     }
+    | |_____^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:123:9
+    |
+123 | impl<T> Future for FutureObj<'_, T> {
+    |         ^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:181:8
+    |
+181 |     F: Future<Output = T> + Unpin + 'a
+    |        ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:190:60
+    |
+190 | unsafe impl<'a, T> UnsafeFutureObj<'a, T> for &'a mut (dyn Future<Output = T> + Unpin + 'a)
+    |                                                            ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:251:16
+    |
+251 |             -> Poll<Result<u64>>;
+    |                ^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:201:8
+    |
+201 |     F: Future<Output = T> + 'a
+    |        ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:210:64
+    |
+210 | unsafe impl<'a, T> UnsafeFutureObj<'a, T> for Pin<&'a mut (dyn Future<Output = T> + 'a)>
+    |                                                                ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:291:16
+    |
+291 |             -> Poll<Result<&[u8]>>;
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:156:36
+    |
+156 |     fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a);
+    |                                    ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:351:16
+    |
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+351 |             -> Poll<Result<usize>>
+    |                ^^^^^^^^^^^^^^^^^^^
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/stream.rs:5:27
+
+  |
+5 | use core::task::{Context, Poll};
+  |                           ^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:176:35
+    |
+176 |     unsafe fn drop(ptr: *mut (dyn Future<Output = T> + 'a));
+    |                                   ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:357:16
+    |
+357 |             -> Poll<Result<usize>>
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:426:16
+    |
+426 |             -> Poll<Result<usize>>
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:78:64
+   |
+78 |     fn poll(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<T> {
+   |                                                                ^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:432:16
+    |
+432 |             -> Poll<Result<usize>>
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:127:60
+    |
+127 |     fn poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<T> {
+    |                                                            ^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:183:36
+    |
+183 |     fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                    ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:437:70
+    |
+437 |         fn poll_flush(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                      ^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:184:26
+    |
+184 |         self as *mut dyn Future<Output = T>
+    |                          ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:441:70
+    |
+441 |         fn poll_close(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                      ^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:187:36
+    |
+187 |     unsafe fn drop(_ptr: *mut (dyn Future<Output = T> + 'a)) {}
+    |                                    ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:498:16
+    |
+498 |             -> Poll<Result<u64>>
+    |                ^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:192:36
+    |
+192 |     fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                    ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:532:16
+    |
+532 |             -> Poll<Result<&[u8]>>
+    |                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:193:26
+    |
+193 |         self as *mut dyn Future<Output = T>
+    |                          ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:319:20
+    |
+319 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+...
+333 |         deref_async_read!();
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:196:36
+    |         -------------------- in this macro invocation
+    |
+196 |     unsafe fn drop(_ptr: *mut (dyn Future<Output = T> + 'a)) {}
+    |                                    ^^^^^^^^^^^^^^^^^^
+
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:203:36
+    |
+203 |     fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                    ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:325:20
+    |
+325 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+333 |         deref_async_read!();
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:204:55
+    |         -------------------- in this macro invocation
+    |
+
+204 |         unsafe { self.get_unchecked_mut() as *mut dyn Future<Output = T> }
+    |                                                       ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:319:20
+    |
+319 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+337 |         deref_async_read!();
+    |         -------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:207:36
+    |
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+207 |     unsafe fn drop(_ptr: *mut (dyn Future<Output = T> + 'a)) {}
+    |                                    ^^^^^^^^^^^^^^^^^^
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:325:20
+
+    |
+325 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+337 |         deref_async_read!();
+    |         -------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:212:36
+    |
+212 |     fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                    ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:371:20
+    |
+371 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+385 |         delegate_async_read_to_stdio!();
+    |         -------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:213:55
+    |
+213 |         unsafe { self.get_unchecked_mut() as *mut dyn Future<Output = T> }
+    |                                                       ^^^^^^^^^^^^^^^^^^
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/stream.rs:61:10
+   |
+61 |     ) -> Poll<Option<Self::Item>>;
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:373:17
+    |
+373 |                 Poll::Ready(io::Read::read(&mut *self, buf))
+    |                 ^^^^^^^^^^^
+...
+385 |         delegate_async_read_to_stdio!();
+    |         -------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:216:36
+    |
+216 |     unsafe fn drop(_ptr: *mut (dyn Future<Output = T> + 'a)) {}
+    |                                    ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:377:20
+    |
+377 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+385 |         delegate_async_read_to_stdio!();
+    |         -------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:225:18
+    |
+225 |         where F: Future<Output = T> + 'a
+    |                  ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:379:17
+    |
+379 |                 Poll::Ready(io::Read::read_vectored(&mut *self, bufs))
+    |                 ^^^^^^^^^^^
+...
+385 |         delegate_async_read_to_stdio!();
+    |         -------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/stream.rs:181:12
+    |
+181 |         -> Poll<Option<Result<Self::Ok, Self::Error>>>;
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:236:63
+    |
+236 |     unsafe impl<'a, T: 'a> UnsafeFutureObj<'a, T> for Box<dyn Future<Output = T> + 'a> {
+    |                                                               ^^^^^^^^^^^^^^^^^^
+
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:391:20
+    |
+391 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+413 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:246:63
+    |
+246 |     unsafe impl<'a, T: 'a> UnsafeFutureObj<'a, T> for Box<dyn Future<Output = T> + Send + 'a> {
+    |                                                               ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/stream.rs:101:10
+    |
+101 |     ) -> Poll<Option<Self::Item>> {
+    |          ^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:258:12
+    |
+258 |         F: Future<Output = T> + 'a
+    |            ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:397:20
+    |
+397 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+413 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/stream.rs:120:10
+    |
+120 |     ) -> Poll<Option<Self::Item>> {
+    |          ^^^^^^^^^^^^^^^^^^^^^^^^
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:271:67
+    |
+271 |     unsafe impl<'a, T: 'a> UnsafeFutureObj<'a, T> for Pin<Box<dyn Future<Output = T> + 'a>> {
+    |                                                                   ^^^^^^^^^^^^^^^^^^
+
+
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/stream.rs:191:12
+    |
+191 |         -> Poll<Option<Result<Self::Ok, Self::Error>>>
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/stream.rs:208:14
+    |
+208 |         ) -> Poll<Option<Self::Item>> {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:402:78
+    |
+402 |             fn poll_flush(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                              ^^^^^^^^^^^^^^^^
+...
+413 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:283:67
+    |
+283 |     unsafe impl<'a, T: 'a> UnsafeFutureObj<'a, T> for Pin<Box<dyn Future<Output = T> + Send + 'a>> {
+    |                                                                   ^^^^^^^^^^^^^^^^^^
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/stream.rs:224:14
+    |
+224 |         ) -> Poll<Option<S::Item>> {
+    |              ^^^^^^^^^^^^^^^^^^^^^
+
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/mod.rs:9:31
+  |
+9 | pub use core::task::{Context, Poll, Waker, RawWaker, RawWakerVTable};
+  |                               ^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:406:78
+    |
+406 |             fn poll_close(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                              ^^^^^^^^^^^^^^^^
+...
+413 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/mod.rs:9:37
+  |
+9 | pub use core::task::{Context, Poll, Waker, RawWaker, RawWakerVTable};
+  |                                     ^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:391:20
+    |
+391 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+417 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/__internal/atomic_waker.rs:5:5
+  |
+5 | use core::task::Waker;
+  |     ^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/__internal/atomic_waker.rs:91:30
+   |
+91 |     waker: UnsafeCell<Option<Waker>>,
+   |                              ^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:397:20
+    |
+397 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+417 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/__internal/atomic_waker.rs:203:29
+    |
+203 |         impl AssertSync for Waker {}
+    |                             ^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:402:78
+    |
+402 |             fn poll_flush(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                              ^^^^^^^^^^^^^^^^
+...
+417 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/__internal/atomic_waker.rs:261:36
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:406:78
+    |
+261 |     pub fn register(&self, waker: &Waker) {
+    |
+406 |             fn poll_close(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                              ^^^^^^^^^^^^^^^^
+...
+417 |         deref_async_write!();
+    |         --------------------- in this macro invocation
+
+    |                                    ^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:449:20
+    |
+449 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+471 |         delegate_async_write_to_stdio!();
+    |         --------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:451:17
+    |
+451 |                 Poll::Ready(io::Write::write(&mut *self, buf))
+    |                 ^^^^^^^^^^^
+...
+471 |         delegate_async_write_to_stdio!();
+    |         --------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:455:20
+    |
+455 |                 -> Poll<Result<usize>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+471 |         delegate_async_write_to_stdio!();
+    |         --------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/task/__internal/atomic_waker.rs:367:34
+    |
+367 |     pub fn take(&self) -> Option<Waker> {
+    |                                  ^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:457:17
+    |
+457 |                 Poll::Ready(io::Write::write_vectored(&mut *self, bufs))
+    |                 ^^^^^^^^^^^
+...
+471 |         delegate_async_write_to_stdio!();
+    |         --------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:460:77
+    |
+460 |             fn poll_flush(mut self: Pin<&mut Self>, _: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                             ^^^^^^^^^^^^^^^^
+...
+471 |         delegate_async_write_to_stdio!();
+    |         --------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:461:17
+    |
+461 |                 Poll::Ready(io::Write::flush(&mut *self))
+    |                 ^^^^^^^^^^^
+...
+471 |         delegate_async_write_to_stdio!();
+    |         --------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:464:74
+    |
+464 |             fn poll_close(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<Result<()>> {
+    |                                                                          ^^^^^^^^^^^^^^^^
+...
+471 |         delegate_async_write_to_stdio!();
+    |         --------------------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:477:20
+    |
+477 |                 -> Poll<Result<u64>>
+    |                    ^^^^^^^^^^^^^^^^^
+...
+485 |         deref_async_seek!();
+    |         -------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:477:20
+    |
+477 |                 -> Poll<Result<u64>>
+    |                    ^^^^^^^^^^^^^^^^^
+...
+489 |         deref_async_seek!();
+    |         -------------------- in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:507:20
+    |
+507 |                 -> Poll<Result<&[u8]>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+519 |         deref_async_buf_read!();
+    |         ------------------------ in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:507:20
+    |
+507 |                 -> Poll<Result<&[u8]>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+523 |         deref_async_buf_read!();
+    |         ------------------------ in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:545:20
+    |
+545 |                 -> Poll<Result<&[u8]>>
+    |                    ^^^^^^^^^^^^^^^^^^^
+...
+557 |         delegate_async_buf_read_to_stdio!();
+    |         ------------------------------------ in this macro invocation
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:547:17
+    |
+547 |                 Poll::Ready(io::BufRead::fill_buf(self.get_mut()))
+    |                 ^^^^^^^^^^^
+...
+557 |         delegate_async_buf_read_to_stdio!();
+    |         ------------------------------------ in this macro invocation
+
+error: Could not compile `futures-io-preview`.
+warning: build failed, waiting for other jobs to finish...
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:12:62
+   |
+12 | pub type BoxFuture<'a, T> = Pin<alloc::boxed::Box<dyn Future<Output = T> + Send + 'a>>;
+   |                                                              ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:295:17
+    |
+295 |     impl<'a, F: Future<Output = ()> + Send + 'a> From<Box<F>> for FutureObj<'a, ()> {
+    |                 ^^^^^^^^^^^^^^^^^^^
+error[E0106]: missing lifetime specifier
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:291:28
+    |
+291 |             -> Poll<Result<&[u8]>>;
+    |                            ^ expected lifetime parameter
+    |
+
+    = help: this function's return type contains a borrowed value, but the signature does not say which one of argument 2's 2 lifetimes it is borrowed from
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:301:27
+    |
+301 |     impl<'a> From<Box<dyn Future<Output = ()> + Send + 'a>> for FutureObj<'a, ()> {
+    |                           ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:307:17
+    |
+307 |     impl<'a, F: Future<Output = ()> + Send + 'a> From<Pin<Box<F>>> for FutureObj<'a, ()> {
+    |                 ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:313:31
+    |
+313 |     impl<'a> From<Pin<Box<dyn Future<Output = ()> + Send + 'a>>> for FutureObj<'a, ()> {
+    |                               ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:319:17
+    |
+319 |     impl<'a, F: Future<Output = ()> + 'a> From<Box<F>> for LocalFutureObj<'a, ()> {
+    |                 ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:325:27
+    |
+325 |     impl<'a> From<Box<dyn Future<Output = ()> + 'a>> for LocalFutureObj<'a, ()> {
+    |                           ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:331:17
+    |
+331 |     impl<'a, F: Future<Output = ()> + 'a> From<Pin<Box<F>>> for LocalFutureObj<'a, ()> {
+    |                 ^^^^^^^^^^^^^^^^^^^
+
+error[E0106]: missing lifetime specifier
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:507:32
+    |
+507 |                 -> Poll<Result<&[u8]>>
+    |                                ^ expected lifetime parameter
+...
+519 |         deref_async_buf_read!();
+    |         ------------------------ in this macro invocation
+    |
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:337:31
+    |
+337 |     impl<'a> From<Pin<Box<dyn Future<Output = ()> + 'a>>> for LocalFutureObj<'a, ()> {
+    |                               ^^^^^^^^^^^^^^^^^^^
+    = help: this function's return type contains a borrowed value, but the signature does not say which one of `cx`'s 2 lifetimes it is borrowed from
+
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:227:40
+    |
+227 |         fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                        ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:231:39
+    |
+231 |         unsafe fn drop(ptr: *mut (dyn Future<Output = T> + 'a)) {
+    |                                       ^^^^^^^^^^^^^^^^^^
+error[E0106]: missing lifetime specifier
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:507:32
+
+    |
+507 |                 -> Poll<Result<&[u8]>>
+    |                                ^ expected lifetime parameter
+...
+523 |         deref_async_buf_read!();
+    |         ------------------------ in this macro invocation
+    |
+    = help: this function's return type contains a borrowed value, but the signature does not say which one of `cx`'s 2 lifetimes it is borrowed from
+
+error[E0106]: missing lifetime specifier
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:532:28
+    |
+532 |             -> Poll<Result<&[u8]>>
+    |                            ^ expected lifetime parameter
+    |
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:237:40
+    |
+237 |         fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                        ^^^^^^^^^^^^^^^^^^
+
+    = help: this function's return type contains a borrowed value, but the signature does not say which one of `cx`'s 2 lifetimes it is borrowed from
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:241:39
+    |
+241 |         unsafe fn drop(ptr: *mut (dyn Future<Output = T> + 'a)) {
+    |                                       ^^^^^^^^^^^^^^^^^^
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:16:67
+   |
+
+16 | pub type LocalBoxFuture<'a, T> = Pin<alloc::boxed::Box<dyn Future<Output = T> + 'a>>;
+   |                                                                   ^^^^^^^^^^
+
+error[E0106]: missing lifetime specifier
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-io-0.3.1/src/lib.rs:545:32
+    |
+545 |                 -> Poll<Result<&[u8]>>
+    |                                ^ expected lifetime parameter
+...
+557 |         delegate_async_buf_read_to_stdio!();
+    |         ------------------------------------ in this macro invocation
+    |
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:247:40
+    |
+247 |         fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                        ^^^^^^^^^^^^^^^^^^
+
+    = help: this function's return type contains a borrowed value, but the signature does not say which one of `_`'s 2 lifetimes it is borrowed from
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:251:39
+    |
+251 |         unsafe fn drop(ptr: *mut (dyn Future<Output = T> + 'a)) {
+    |                                       ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:260:44
+    |
+260 |         fn into_raw(mut self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                            ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:266:39
+    |
+266 |         unsafe fn drop(ptr: *mut (dyn Future<Output = T> + 'a)) {
+    |                                       ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:272:44
+    |
+272 |         fn into_raw(mut self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                            ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:278:39
+    |
+278 |         unsafe fn drop(ptr: *mut (dyn Future<Output = T> + 'a)) {
+    |                                       ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:284:44
+    |
+284 |         fn into_raw(mut self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                            ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:76:30
+   |
+76 |     where F: ?Sized + Future<Output = Result<T, E>>
+   |                              ^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:290:39
+    |
+290 |         unsafe fn drop(ptr: *mut (dyn Future<Output = T> + 'a)) {
+    |                                       ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:302:32
+    |
+302 |         fn from(boxed: Box<dyn Future<Output = ()> + Send + 'a>) -> Self {
+    |                                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:314:36
+    |
+314 |         fn from(boxed: Pin<Box<dyn Future<Output = ()> + Send + 'a>>) -> Self {
+    |                                    ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:326:32
+    |
+326 |         fn from(boxed: Box<dyn Future<Output = ()> + 'a>) -> Self {
+    |                                ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:338:36
+    |
+338 |         fn from(boxed: Pin<Box<dyn Future<Output = ()> + 'a>>) -> Self {
+    |                                    ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:82:69
+   |
+82 |     fn try_poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<F::Output> {
+   |                                                                     ^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:51:9
+   |
+51 |     use super::Future;
+   |         ^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.1/src/future.rs:52:57
+   |
+52 |     impl<F, T, E> Sealed for F where F: ?Sized + Future<Output = Result<T, E>> {}
+   |                                                         ^^^^^^^^^^^^^^^^^^^^^
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:55:50
+   |
+55 |     impl<F, T, E> Sealed for F where F: ?Sized + Future<Output = Result<T, E>> {}
+   |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/stream.rs:5:27
+  |
+5 | use core::task::{Context, Poll};
+  |                           ^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/stream.rs:61:10
+   |
+61 |     ) -> Poll<Option<Self::Item>>;
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/stream.rs:181:12
+    |
+181 |         -> Poll<Option<Result<Self::Ok, Self::Error>>>;
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/stream.rs:101:10
+    |
+101 |     ) -> Poll<Option<Self::Item>> {
+    |          ^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/stream.rs:120:10
+    |
+120 |     ) -> Poll<Option<Self::Item>> {
+    |          ^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/stream.rs:191:12
+    |
+191 |         -> Poll<Option<Result<Self::Ok, Self::Error>>>
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/stream.rs:208:14
+    |
+208 |         ) -> Poll<Option<Self::Item>> {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/stream.rs:223:14
+    |
+223 |         ) -> Poll<Option<Self::Item>> {
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/stream.rs:224:13
+    |
+224 |             Poll::Ready(self.pop_front())
+    |             ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/stream.rs:240:14
+    |
+240 |         ) -> Poll<Option<S::Item>> {
+    |              ^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/task/mod.rs:12:31
+   |
+12 | pub use core::task::{Context, Poll, Waker, RawWaker, RawWakerVTable};
+   |                               ^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/task/mod.rs:12:37
+   |
+12 | pub use core::task::{Context, Poll, Waker, RawWaker, RawWakerVTable};
+   |                                     ^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+ --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/task/__internal/atomic_waker.rs:5:5
+  |
+5 | use crate::task::Waker;
+  |     ^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/task/__internal/atomic_waker.rs:91:30
+   |
+91 |     waker: UnsafeCell<Option<Waker>>,
+   |                              ^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/task/__internal/atomic_waker.rs:203:29
+    |
+203 |         impl AssertSync for Waker {}
+    |                             ^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/task/__internal/atomic_waker.rs:261:36
+    |
+261 |     pub fn register(&self, waker: &Waker) {
+    |                                    ^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/task/__internal/atomic_waker.rs:360:34
+    |
+360 |     pub fn take(&self) -> Option<Waker> {
+    |                                  ^^^^^
+
+error: aborting due to 36 previous errors
+
+Some errors occurred: E0432, E0658.
+For more information about an error, try `rustc --explain E0432`.
+error: aborting due to 55 previous errors
+
+Some errors occurred: E0106, E0432, E0658.
+For more information about an error, try `rustc --explain E0106`.
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:15:62
+   |
+15 | pub type BoxFuture<'a, T> = Pin<alloc::boxed::Box<dyn Future<Output = T> + Send + 'a>>;
+   |                                                              ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:19:67
+   |
+19 | pub type LocalBoxFuture<'a, T> = Pin<alloc::boxed::Box<dyn Future<Output = T> + 'a>>;
+   |                                                                   ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:79:30
+   |
+79 |     where F: ?Sized + Future<Output = Result<T, E>>
+   |                              ^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:85:69
+   |
+85 |     fn try_poll(self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<F::Output> {
+   |                                                                     ^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:17:30
+   |
+17 |     future: *mut (dyn Future<Output = T> + 'static),
+   |                              ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:18:41
+   |
+18 |     drop_fn: unsafe fn(*mut (dyn Future<Output = T> + 'static)),
+   |                                         ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:27:25
+   |
+27 |     -> *mut (dyn Future<Output = T> + 'static)
+   |                         ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:26:63
+   |
+26 | unsafe fn remove_future_lifetime<'a, T>(ptr: *mut (dyn Future<Output = T> + 'a))
+   |                                                               ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:34:35
+   |
+34 |     -> unsafe fn(*mut (dyn Future<Output = T> + 'static))
+   |                                   ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:33:72
+   |
+33 | unsafe fn remove_drop_lifetime<'a, T>(ptr: unsafe fn (*mut (dyn Future<Output = T> + 'a)))
+   |                                                                        ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:181:15
+    |
+181 |     F: Future<Output = T> + Unpin + 'a
+    |               ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:190:67
+    |
+190 | unsafe impl<'a, T> UnsafeFutureObj<'a, T> for &'a mut (dyn Future<Output = T> + Unpin + 'a)
+    |                                                                   ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:201:15
+    |
+201 |     F: Future<Output = T> + 'a
+    |               ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:210:71
+    |
+210 | unsafe impl<'a, T> UnsafeFutureObj<'a, T> for Pin<&'a mut (dyn Future<Output = T> + 'a)>
+    |                                                                       ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:156:43
+    |
+156 |     fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a);
+    |                                           ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:176:42
+    |
+176 |     unsafe fn drop(ptr: *mut (dyn Future<Output = T> + 'a));
+    |                                          ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:183:43
+    |
+183 |     fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                           ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:187:43
+    |
+187 |     unsafe fn drop(_ptr: *mut (dyn Future<Output = T> + 'a)) {}
+    |                                           ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:192:43
+    |
+192 |     fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                           ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:196:43
+    |
+196 |     unsafe fn drop(_ptr: *mut (dyn Future<Output = T> + 'a)) {}
+    |                                           ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:203:43
+    |
+203 |     fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                           ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:207:43
+    |
+207 |     unsafe fn drop(_ptr: *mut (dyn Future<Output = T> + 'a)) {}
+    |                                           ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:212:43
+    |
+212 |     fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                           ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:216:43
+    |
+216 |     unsafe fn drop(_ptr: *mut (dyn Future<Output = T> + 'a)) {}
+    |                                           ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:225:25
+    |
+225 |         where F: Future<Output = T> + 'a
+    |                         ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:236:70
+    |
+236 |     unsafe impl<'a, T: 'a> UnsafeFutureObj<'a, T> for Box<dyn Future<Output = T> + 'a> {
+    |                                                                      ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:246:70
+    |
+246 |     unsafe impl<'a, T: 'a> UnsafeFutureObj<'a, T> for Box<dyn Future<Output = T> + Send + 'a> {
+    |                                                                      ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:258:19
+    |
+258 |         F: Future<Output = T> + 'a
+    |                   ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:271:74
+    |
+271 |     unsafe impl<'a, T: 'a> UnsafeFutureObj<'a, T> for Pin<Box<dyn Future<Output = T> + 'a>> {
+    |                                                                          ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:283:74
+    |
+283 |     unsafe impl<'a, T: 'a> UnsafeFutureObj<'a, T> for Pin<Box<dyn Future<Output = T> + Send + 'a>> {
+    |                                                                          ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:295:24
+    |
+295 |     impl<'a, F: Future<Output = ()> + Send + 'a> From<Box<F>> for FutureObj<'a, ()> {
+    |                        ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:301:34
+    |
+301 |     impl<'a> From<Box<dyn Future<Output = ()> + Send + 'a>> for FutureObj<'a, ()> {
+    |                                  ^^^^^^^^^^^
+
+error: Could not compile `futures-core`.
+warning: build failed, waiting for other jobs to finish...
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:307:24
+    |
+307 |     impl<'a, F: Future<Output = ()> + Send + 'a> From<Pin<Box<F>>> for FutureObj<'a, ()> {
+    |                        ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:313:38
+    |
+313 |     impl<'a> From<Pin<Box<dyn Future<Output = ()> + Send + 'a>>> for FutureObj<'a, ()> {
+    |                                      ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:319:24
+    |
+319 |     impl<'a, F: Future<Output = ()> + 'a> From<Box<F>> for LocalFutureObj<'a, ()> {
+    |                        ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:325:34
+    |
+325 |     impl<'a> From<Box<dyn Future<Output = ()> + 'a>> for LocalFutureObj<'a, ()> {
+    |                                  ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:331:24
+    |
+331 |     impl<'a, F: Future<Output = ()> + 'a> From<Pin<Box<F>>> for LocalFutureObj<'a, ()> {
+    |                        ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:337:38
+    |
+337 |     impl<'a> From<Pin<Box<dyn Future<Output = ()> + 'a>>> for LocalFutureObj<'a, ()> {
+    |                                      ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:227:47
+    |
+227 |         fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                               ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:231:46
+    |
+231 |         unsafe fn drop(ptr: *mut (dyn Future<Output = T> + 'a)) {
+    |                                              ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:237:47
+    |
+237 |         fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                               ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:241:46
+    |
+241 |         unsafe fn drop(ptr: *mut (dyn Future<Output = T> + 'a)) {
+    |                                              ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:247:47
+    |
+247 |         fn into_raw(self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                               ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:251:46
+    |
+251 |         unsafe fn drop(ptr: *mut (dyn Future<Output = T> + 'a)) {
+    |                                              ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:260:51
+    |
+260 |         fn into_raw(mut self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                                   ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:266:46
+    |
+266 |         unsafe fn drop(ptr: *mut (dyn Future<Output = T> + 'a)) {
+    |                                              ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:272:51
+    |
+272 |         fn into_raw(mut self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                                   ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:278:46
+    |
+278 |         unsafe fn drop(ptr: *mut (dyn Future<Output = T> + 'a)) {
+    |                                              ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:284:51
+    |
+284 |         fn into_raw(mut self) -> *mut (dyn Future<Output = T> + 'a) {
+    |                                                   ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:290:46
+    |
+290 |         unsafe fn drop(ptr: *mut (dyn Future<Output = T> + 'a)) {
+    |                                              ^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:302:39
+    |
+302 |         fn from(boxed: Box<dyn Future<Output = ()> + Send + 'a>) -> Self {
+    |                                       ^^^^^^^^^^^
+
+error: Could not compile `futures-io`.
+warning: build failed, waiting for other jobs to finish...
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:314:43
+    |
+314 |         fn from(boxed: Pin<Box<dyn Future<Output = ()> + Send + 'a>>) -> Self {
+    |                                           ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:326:39
+    |
+326 |         fn from(boxed: Box<dyn Future<Output = ()> + 'a>) -> Self {
+    |                                       ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/future_obj.rs:338:43
+    |
+338 |         fn from(boxed: Pin<Box<dyn Future<Output = ()> + 'a>>) -> Self {
+    |                                           ^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'futures_api': futures in libcore are unstable (see issue #50547)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-preview-0.3.0-alpha.19/src/future/mod.rs:55:57
+   |
+55 |     impl<F, T, E> Sealed for F where F: ?Sized + Future<Output = Result<T, E>> {}
+   |                                                         ^^^^^^^^^^^^^^^^^^^^^
+
+error: aborting due to 28 previous errors
+
+Some errors occurred: E0432, E0658.
+For more information about an error, try `rustc --explain E0432`.
+error: aborting due to 154 previous errors
+
+Some errors occurred: E0432, E0658.
+For more information about an error, try `rustc --explain E0432`.
+error: aborting due to 28 previous errors
+
+Some errors occurred: E0432, E0658.
+For more information about an error, try `rustc --explain E0432`.
+error: Could not compile `futures-sink-preview`.
+warning: build failed, waiting for other jobs to finish...
+error[E0658]: use of unstable library feature 'alloc': this library is unlikely to be stabilized in its current form or name (see issue #27783)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:38:1
+   |
+38 | extern crate alloc;
+   | ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+  --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:51:5
+   |
+51 | use core::mem::MaybeUninit;
+   |     ^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:298:12
+    |
+298 |     Inline(MaybeUninit<A>),
+    |            ^^^^^^^^^^^^^^
+
+error: Could not compile `futures-core-preview`.
+warning: build failed, waiting for other jobs to finish...
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:319:28
+    |
+319 |     fn from_inline(inline: MaybeUninit<A>) -> SmallVecData<A> {
+    |                            ^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:323:36
+    |
+323 |     unsafe fn into_inline(self) -> MaybeUninit<A> {
+    |                                    ^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:398:45
+    |
+398 |             data: SmallVecData::from_inline(MaybeUninit::uninit()),
+    |                                             ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:438:63
+    |
+438 |                 let mut data = SmallVecData::<A>::from_inline(MaybeUninit::uninit());
+    |                                                               ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:474:45
+    |
+474 |             data: SmallVecData::from_inline(MaybeUninit::new(buf)),
+    |                                             ^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:493:55
+    |
+493 |         unsafe { SmallVec::from_buf_and_len_unchecked(MaybeUninit::new(buf), len) }
+    |                                                       ^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:512:51
+    |
+512 |     pub unsafe fn from_buf_and_len_unchecked(buf: MaybeUninit<A>, len: usize) -> SmallVec<A> {
+    |                                                   ^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:674:55
+    |
+674 |                 self.data = SmallVecData::from_inline(MaybeUninit::uninit());
+    |                                                       ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:741:55
+    |
+741 |                 self.data = SmallVecData::from_inline(MaybeUninit::uninit());
+    |                                                       ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+    --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:1074:52
+     |
+1074 |                     let mut data: MaybeUninit<A> = MaybeUninit::uninit();
+     |                                                    ^^^^^^^^^^^^^^^^^^^
+
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+    --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:1074:35
+     |
+1074 |                     let mut data: MaybeUninit<A> = MaybeUninit::uninit();
+     |                                   ^^^^^^^^^^^^^^
+
+error: Could not compile `futures-sink`.
+warning: build failed, waiting for other jobs to finish...
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:307:42
+    |
+307 |             SmallVecData::Inline(a) => a.as_ptr() as *const A::Item,
+    |                                          ^^^^^^
+
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:314:42
+    |
+314 |             SmallVecData::Inline(a) => a.as_mut_ptr() as *mut A::Item,
+    |                                          ^^^^^^^^^^
+
+error[E0599]: no function or associated item named `uninit` found for type `core::mem::MaybeUninit<_>` in the current scope
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:398:58
+    |
+398 |             data: SmallVecData::from_inline(MaybeUninit::uninit()),
+    |                                             -------------^^^^^^
+    |                                             |
+    |                                             function or associated item not found in `core::mem::MaybeUninit<_>`
+
+error[E0599]: no function or associated item named `uninit` found for type `core::mem::MaybeUninit<_>` in the current scope
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:438:76
+    |
+438 |                 let mut data = SmallVecData::<A>::from_inline(MaybeUninit::uninit());
+    |                                                               -------------^^^^^^
+    |                                                               |
+    |                                                               function or associated item not found in `core::mem::MaybeUninit<_>`
+
+error[E0599]: no function or associated item named `uninit` found for type `core::mem::MaybeUninit<_>` in the current scope
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:674:68
+    |
+674 |                 self.data = SmallVecData::from_inline(MaybeUninit::uninit());
+    |                                                       -------------^^^^^^
+    |                                                       |
+    |                                                       function or associated item not found in `core::mem::MaybeUninit<_>`
+
+error[E0599]: no function or associated item named `uninit` found for type `core::mem::MaybeUninit<_>` in the current scope
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:741:68
+    |
+741 |                 self.data = SmallVecData::from_inline(MaybeUninit::uninit());
+    |                                                       -------------^^^^^^
+    |                                                       |
+    |                                                       function or associated item not found in `core::mem::MaybeUninit<_>`
+
+error[E0599]: no method named `assume_init` found for type `core::mem::MaybeUninit<A>` in the current scope
+   --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:912:39
+    |
+912 |                 Ok(data.into_inline().assume_init())
+    |                                       ^^^^^^^^^^^
+
+error[E0599]: no function or associated item named `uninit` found for type `core::mem::MaybeUninit<_>` in the current scope
+    --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:1074:65
+     |
+1074 |                     let mut data: MaybeUninit<A> = MaybeUninit::uninit();
+     |                                                    -------------^^^^^^
+     |                                                    |
+     |                                                    function or associated item not found in `core::mem::MaybeUninit<_>`
+
+error[E0658]: use of unstable library feature 'maybe_uninit' (see issue #53491)
+    --> /Users/cdbattags/.cargo/registry/src/github.com-1ecc6299db9ec823/smallvec-1.0.0/lib.rs:1077:30
+     |
+1077 |                         data.as_mut_ptr() as *mut A::Item,
+     |                              ^^^^^^^^^^
+
+error: aborting due to 23 previous errors
+
+Some errors occurred: E0599, E0658.
+For more information about an error, try `rustc --explain E0599`.
+error: Could not compile `smallvec`.
+warning: build failed, waiting for other jobs to finish...
+error: build failed

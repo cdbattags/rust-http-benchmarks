@@ -1,0 +1,3 @@
+[submodule "actix-web"]
+	path = actix-web
+	url = git@github.com:actix/actix-web.git

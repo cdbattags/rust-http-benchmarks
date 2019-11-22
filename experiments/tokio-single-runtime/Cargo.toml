@@ -1,6 +1,5 @@
 [package]
-authors = ["night"]
-name = "tokio-2"
+name = "tokio-single-runtime"
 version = "0.1.0"
 
 [dependencies]

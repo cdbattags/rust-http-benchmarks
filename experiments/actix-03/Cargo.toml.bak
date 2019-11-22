@@ -1,0 +1,77 @@
+[package]
+name = "actix-03"
+version = "0.1.0"
+authors = ["Christian Battaglia <christian.d.battaglia@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+actix-web = { path = "../../actix-web" }
+actix-codec = "0.2.0-alpha.1"
+actix-service = "1.0.0-alpha.1"
+actix-utils = "0.5.0-alpha.1"
+actix-router = "0.1.5"
+actix-rt = "1.0.0-alpha.1"
+actix-web-codegen = "0.2.0-alpha.1"
+actix-http = "0.3.0-alpha.1"
+actix-server = "0.8.0-alpha.1"
+actix-server-config = "0.3.0-alpha.1"
+actix-testing = "0.3.0-alpha.1"
+actix-threadpool = "0.2.0-alpha.1"
+awc = { version = "0.3.0-alpha.1", optional = true }
+
+bytes = "0.4"
+derive_more = "0.15.0"
+encoding_rs = "0.8"
+futures = "0.3.1"
+hashbrown = "0.6.3"
+log = "0.4"
+mime = "0.3"
+net2 = "0.2.33"
+parking_lot = "0.9"
+pin-project = "0.4.5"
+regex = "1.0"
+serde = { version = "1.0", features=["derive"] }
+serde_json = "1.0"
+serde_urlencoded = "0.6.1"
+time = "0.1.42"
+url = "2.1"
+
+# ssl support
+open-ssl = { version="0.10", package="openssl", optional = true }
+rust-tls = { version = "0.16", package="rustls", optional = true }
+
+[dev-dependencies]
+# actix = "0.8.3"
+actix-connect = "0.3.0-alpha.1"
+actix-http-test = "0.3.0-alpha.1"
+rand = "0.7"
+env_logger = "0.6"
+serde_derive = "1.0"
+tokio-timer = "0.3.0-alpha.6"
+brotli2 = "0.3.2"
+flate2 = "1.0.2"
+
+[profile.release]
+lto = true
+opt-level = 3
+codegen-units = 1
+
+[patch.crates-io]
+actix-http = { path = "../../actix-web/actix-http" }
+actix-http-test = { path = "../../actix-web/test-server" }
+actix-web-codegen = { path = "../../actix-web/actix-web-codegen" }
+# actix-web-actors = { path = "../../actix-web/actix-web-actors" }
+actix-session = { path = "../../actix-web/actix-session" }
+actix-files = { path = "../../actix-web/actix-files" }
+actix-multipart = { path = "../../actix-web/actix-multipart" }
+awc = { path = "../../actix-web/awc" }
+
+actix-codec = { git = "https://github.com/actix/actix-net.git" }
+actix-connect = { git = "https://github.com/actix/actix-net.git" }
+actix-rt = { git = "https://github.com/actix/actix-net.git" }
+actix-server = { git = "https://github.com/actix/actix-net.git" }
+actix-server-config = { git = "https://github.com/actix/actix-net.git" }
+actix-service = { git = "https://github.com/actix/actix-net.git" }
+actix-testing = { git = "https://github.com/actix/actix-net.git" }
+actix-threadpool = { git = "https://github.com/actix/actix-net.git" }
+actix-utils = {  git = "https://github.com/actix/actix-net.git" }

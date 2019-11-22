@@ -1,0 +1,28 @@
+[package]
+name = "actix-03"
+version = "0.1.0"
+authors = ["Christian Battaglia <christian.d.battaglia@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+actix-web = { path = "../../actix-web" }
+
+[patch.crates-io]
+actix-http = { path = "../../actix-web/actix-http" }
+actix-http-test = { path = "../../actix-web/test-server" }
+actix-web-codegen = { path = "../../actix-web/actix-web-codegen" }
+# actix-web-actors = { path = "../../actix-web/actix-web-actors" }
+actix-session = { path = "../../actix-web/actix-session" }
+actix-files = { path = "../../actix-web/actix-files" }
+actix-multipart = { path = "../../actix-web/actix-multipart" }
+awc = { path = "../../actix-web/awc" }
+
+actix-codec = { git = "https://github.com/actix/actix-net.git" }
+actix-connect = { git = "https://github.com/actix/actix-net.git" }
+actix-rt = { git = "https://github.com/actix/actix-net.git" }
+actix-server = { git = "https://github.com/actix/actix-net.git" }
+actix-server-config = { git = "https://github.com/actix/actix-net.git" }
+actix-service = { git = "https://github.com/actix/actix-net.git" }
+actix-testing = { git = "https://github.com/actix/actix-net.git" }
+actix-threadpool = { git = "https://github.com/actix/actix-net.git" }
+actix-utils = {  git = "https://github.com/actix/actix-net.git" }

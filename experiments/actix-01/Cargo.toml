@@ -1,6 +1,6 @@
 [package]
-name = "actix"
-version = "0.7.0"
+name = "actix-01"
+version = "0.1.0"
 
 [[bin]]
 name = "actix"
